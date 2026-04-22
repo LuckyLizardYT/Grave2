@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="faqs.css" />
+    <link rel="icon" type="image/x-icon" href="assets/grave.ico">
+    <title>FAQs — GRAVE Bot</title>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <nav class="navbar">
+        <div class="heading">
+            <a href="index.html"><img src="assets/grave.webp" alt="GRAVE Logo"></a>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="command.html">Commands</a></li>
+            <li><a href="status.html">Status</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="faqs.html" class="active">FAQs</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+        <a href="https://github.com/Adicodes270/grave-dc-bot" target="_blank" class="github-btn">
+            <button><i class="fa-brands fa-github"></i> Github</button>
+        </a>
+    </nav>
+
+    <header class="page-header">
+        <p class="breadcrumb"><a href="index.html">Home</a> / FAQs</p>
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about GRAVE. Can't find your answer? <a href="https://discord.gg/j4jb6y2wFG" target="_blank" style="color:var(--red)">Ask in our Discord.</a></p>
+    </header>
+
+    <main class="faqs-main">
+
+        <div class="faq-category">
+            <h3 class="faq-cat-title">General</h3>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is GRAVE? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>GRAVE is an all-in-one Discord bot designed for server management, moderation, music, utility, and fun. It's built to give server owners everything they need in a single bot.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is GRAVE free to use? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! GRAVE is completely free to use. All core features are available at no cost. Premium features may be introduced in the future.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I add GRAVE to my server? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Click the <strong>Add Grave</strong> button on the homepage or visit the invite link directly. You'll need <strong>Manage Server</strong> permission to invite bots.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="faq-cat-title">Permissions & Setup</h3>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What permissions does GRAVE need? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>GRAVE needs Administrator or specific permissions like Manage Messages, Kick Members, Ban Members, Connect, and Speak. Check the <a href="docs.html#permissions">Docs</a> for the full list.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    GRAVE isn't responding to my commands — what do I do? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Make sure GRAVE has the right permissions in the channel. Also verify that slash commands are enabled. If issues persist, check our <a href="status.html">Status page</a> or reach out on Discord.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I restrict commands to certain roles? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. Discord's built-in permission system lets you restrict slash commands per role or channel. Go to Server Settings → Integrations → GRAVE to configure this.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="faq-cat-title">Music</h3>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What music sources does GRAVE support? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>GRAVE supports YouTube, Spotify (via search), and SoundCloud. Direct links and search queries are both supported.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Why is the music stuttering or lagging? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>This is usually caused by network latency or Discord's voice server. Try using <code>/stop</code> and rejoining the voice channel, then starting playback again.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="faq-cat-title">Support</h3>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I report a bug? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Join our <a href="https://discord.gg/j4jb6y2wFG" target="_blank" style="color:var(--red)">support server</a> and post in the #bug-reports channel, or open an issue on our <a href="https://github.com/Adicodes270/grave-dc-bot" target="_blank" style="color:var(--red)">GitHub repository</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I contribute to GRAVE's development? <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely! Fork the repo on GitHub and submit a pull request. Contributions are always welcome — whether it's new features, bug fixes, or documentation improvements.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 GRAVE Bot · <a href="https://github.com/Adicodes270" target="_blank">Adicodes270</a></p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

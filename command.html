@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="command.css" />
+    <link rel="icon" type="image/x-icon" href="assets/grave.ico">
+    <title>Commands — GRAVE Bot</title>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <nav class="navbar">
+        <div class="heading">
+            <a href="index.html"><img src="assets/grave.webp" alt="GRAVE Logo"></a>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="command.html" class="active">Commands</a></li>
+            <li><a href="status.html">Status</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+        <a href="https://github.com/Adicodes270/grave-dc-bot" target="_blank" class="github-btn">
+            <button><i class="fa-brands fa-github"></i> Github</button>
+        </a>
+    </nav>
+
+    <header class="page-header">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Commands</p>
+        <h1>Commands</h1>
+        <p>Browse all available GRAVE bot commands. Use the search or filter by category to find what you need.</p>
+    </header>
+
+    <main class="commands-main">
+
+        <!-- Search & Filter -->
+        <div class="cmd-controls">
+            <div class="search-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="cmdSearch" placeholder="Search commands…" />
+            </div>
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-btn active" data-cat="all">All</button>
+                <button class="filter-btn" data-cat="moderation">Moderation</button>
+                <button class="filter-btn" data-cat="music">Music</button>
+                <button class="filter-btn" data-cat="utility">Utility</button>
+                <button class="filter-btn" data-cat="fun">Fun</button>
+            </div>
+        </div>
+
+        <!-- Command Table -->
+        <div class="cmd-table-wrap">
+            <table class="cmd-table" id="cmdTable">
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Description</th>
+                        <th>Usage</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-cat="moderation">
+                        <td><code>/ban</code></td>
+                        <td>Ban a member from the server</td>
+                        <td><code>/ban @user [reason]</code></td>
+                        <td><span class="cat-badge mod">Moderation</span></td>
+                    </tr>
+                    <tr data-cat="moderation">
+                        <td><code>/kick</code></td>
+                        <td>Kick a member from the server</td>
+                        <td><code>/kick @user [reason]</code></td>
+                        <td><span class="cat-badge mod">Moderation</span></td>
+                    </tr>
+                    <tr data-cat="moderation">
+                        <td><code>/mute</code></td>
+                        <td>Mute a member for a set duration</td>
+                        <td><code>/mute @user 10m [reason]</code></td>
+                        <td><span class="cat-badge mod">Moderation</span></td>
+                    </tr>
+                    <tr data-cat="moderation">
+                        <td><code>/warn</code></td>
+                        <td>Issue a warning to a member</td>
+                        <td><code>/warn @user [reason]</code></td>
+                        <td><span class="cat-badge mod">Moderation</span></td>
+                    </tr>
+                    <tr data-cat="moderation">
+                        <td><code>/purge</code></td>
+                        <td>Bulk delete messages in a channel</td>
+                        <td><code>/purge [amount]</code></td>
+                        <td><span class="cat-badge mod">Moderation</span></td>
+                    </tr>
+                    <tr data-cat="music">
+                        <td><code>/play</code></td>
+                        <td>Play a song or add it to the queue</td>
+                        <td><code>/play [song name or URL]</code></td>
+                        <td><span class="cat-badge music">Music</span></td>
+                    </tr>
+                    <tr data-cat="music">
+                        <td><code>/skip</code></td>
+                        <td>Skip the current playing song</td>
+                        <td><code>/skip</code></td>
+                        <td><span class="cat-badge music">Music</span></td>
+                    </tr>
+                    <tr data-cat="music">
+                        <td><code>/queue</code></td>
+                        <td>View the current music queue</td>
+                        <td><code>/queue</code></td>
+                        <td><span class="cat-badge music">Music</span></td>
+                    </tr>
+                    <tr data-cat="utility">
+                        <td><code>/help</code></td>
+                        <td>Display the help menu</td>
+                        <td><code>/help [command]</code></td>
+                        <td><span class="cat-badge util">Utility</span></td>
+                    </tr>
+                    <tr data-cat="utility">
+                        <td><code>/userinfo</code></td>
+                        <td>Get information about a user</td>
+                        <td><code>/userinfo @user</code></td>
+                        <td><span class="cat-badge util">Utility</span></td>
+                    </tr>
+                    <tr data-cat="utility">
+                        <td><code>/serverinfo</code></td>
+                        <td>Get information about the server</td>
+                        <td><code>/serverinfo</code></td>
+                        <td><span class="cat-badge util">Utility</span></td>
+                    </tr>
+                    <tr data-cat="fun">
+                        <td><code>/meme</code></td>
+                        <td>Get a random meme</td>
+                        <td><code>/meme</code></td>
+                        <td><span class="cat-badge fun">Fun</span></td>
+                    </tr>
+                    <tr data-cat="fun">
+                        <td><code>/8ball</code></td>
+                        <td>Ask the magic 8-ball a question</td>
+                        <td><code>/8ball [question]</code></td>
+                        <td><span class="cat-badge fun">Fun</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="no-results" id="noResults" style="display:none;">No commands found.</p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 GRAVE Bot · <a href="https://github.com/Adicodes270" target="_blank">Adicodes270</a></p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

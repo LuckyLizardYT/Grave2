@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="docs.css" />
+    <link rel="icon" type="image/x-icon" href="assets/grave.ico">
+    <title>Documentation — GRAVE Bot</title>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <nav class="navbar">
+        <div class="heading">
+            <a href="index.html"><img src="assets/grave.webp" alt="GRAVE Logo"></a>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="command.html">Commands</a></li>
+            <li><a href="status.html">Status</a></li>
+            <li><a href="docs.html" class="active">Docs</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+        <a href="https://github.com/Adicodes270/grave-dc-bot" target="_blank" class="github-btn">
+            <button><i class="fa-brands fa-github"></i> Github</button>
+        </a>
+    </nav>
+
+    <div class="docs-layout">
+
+        <!-- Sidebar -->
+        <aside class="docs-sidebar" id="docsSidebar">
+            <button class="sidebar-toggle" id="sidebarToggle"><i class="fa-solid fa-bars"></i> Menu</button>
+            <nav class="sidebar-nav">
+                <p class="sidebar-section-label">Getting Started</p>
+                <a href="#intro" class="sidebar-link active">Introduction</a>
+                <a href="#invite" class="sidebar-link">Invite the Bot</a>
+                <a href="#permissions" class="sidebar-link">Permissions</a>
+
+                <p class="sidebar-section-label">Configuration</p>
+                <a href="#prefix" class="sidebar-link">Prefix Setup</a>
+                <a href="#logging" class="sidebar-link">Logging</a>
+                <a href="#autoroles" class="sidebar-link">Auto Roles</a>
+
+                <p class="sidebar-section-label">Modules</p>
+                <a href="#moderation" class="sidebar-link">Moderation</a>
+                <a href="#music" class="sidebar-link">Music</a>
+                <a href="#utility" class="sidebar-link">Utility</a>
+            </nav>
+        </aside>
+
+        <!-- Content -->
+        <main class="docs-content">
+
+            <section id="intro" class="doc-section">
+                <h2>Introduction</h2>
+                <p>Welcome to the official GRAVE Bot documentation. GRAVE is a powerful, all-in-one Discord bot designed to help you manage, grow, and engage your server community.</p>
+                <p>This documentation covers everything from initial setup to advanced configuration options. If you need additional help, join our <a href="https://discord.gg/j4jb6y2wFG" target="_blank">support server</a>.</p>
+                <div class="doc-callout info">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>GRAVE requires <strong>Administrator</strong> or specific permissions depending on what features you use.</span>
+                </div>
+            </section>
+
+            <section id="invite" class="doc-section">
+                <h2>Invite the Bot</h2>
+                <p>To add GRAVE to your server, click the button below or use the invite link:</p>
+                <a href="https://discord.com/oauth2/authorize?client_id=1489199956052017224&permissions=8&integration_type=0&scope=applications.commands+bot" target="_blank" class="doc-btn">
+                    <i class="fa-brands fa-discord"></i> Add GRAVE to Your Server
+                </a>
+                <p>Make sure you select the correct server and grant the requested permissions for full functionality.</p>
+            </section>
+
+            <section id="permissions" class="doc-section">
+                <h2>Permissions</h2>
+                <p>GRAVE needs the following permissions to function correctly:</p>
+                <ul class="doc-list">
+                    <li><strong>Manage Messages</strong> — Required for moderation and purge commands</li>
+                    <li><strong>Kick / Ban Members</strong> — Required for moderation actions</li>
+                    <li><strong>Manage Roles</strong> — Required for role assignment features</li>
+                    <li><strong>Connect / Speak</strong> — Required for music playback</li>
+                    <li><strong>Send Messages / Embed Links</strong> — Required for all responses</li>
+                </ul>
+            </section>
+
+            <section id="prefix" class="doc-section">
+                <h2>Prefix Setup</h2>
+                <p>GRAVE uses slash commands by default. All commands start with <code>/</code>. You can also configure a custom text prefix using:</p>
+                <div class="code-block"><code>/config prefix [your-prefix]</code></div>
+            </section>
+
+            <section id="logging" class="doc-section">
+                <h2>Logging</h2>
+                <p>Set up a log channel to track all moderation actions and bot events:</p>
+                <div class="code-block"><code>/config logs #channel</code></div>
+                <p>The log channel will receive messages for bans, kicks, warns, role changes, and more.</p>
+            </section>
+
+            <section id="autoroles" class="doc-section">
+                <h2>Auto Roles</h2>
+                <p>Automatically assign roles when new members join your server:</p>
+                <div class="code-block"><code>/autorole set @role</code></div>
+                <div class="code-block"><code>/autorole remove @role</code></div>
+            </section>
+
+            <section id="moderation" class="doc-section">
+                <h2>Moderation Module</h2>
+                <p>GRAVE's moderation module provides a comprehensive set of tools for keeping your server safe.</p>
+                <ul class="doc-list">
+                    <li>Ban, kick, mute, and warn members</li>
+                    <li>Auto-moderation with spam, link, and word filters</li>
+                    <li>Detailed audit logs for all actions</li>
+                    <li>Temporary mutes and bans with automatic expiry</li>
+                </ul>
+            </section>
+
+            <section id="music" class="doc-section">
+                <h2>Music Module</h2>
+                <p>Stream high-quality audio directly in voice channels. GRAVE supports YouTube, Spotify, and SoundCloud.</p>
+                <div class="code-block"><code>/play [song name or URL]</code></div>
+                <div class="code-block"><code>/queue</code></div>
+                <div class="code-block"><code>/skip</code></div>
+            </section>
+
+            <section id="utility" class="doc-section">
+                <h2>Utility Module</h2>
+                <p>Useful server and user tools available to all members:</p>
+                <ul class="doc-list">
+                    <li><code>/userinfo</code> — View info about a member</li>
+                    <li><code>/serverinfo</code> — View server statistics</li>
+                    <li><code>/avatar @user</code> — Get a user's avatar</li>
+                    <li><code>/ping</code> — Check bot latency</li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 GRAVE Bot · <a href="https://github.com/Adicodes270" target="_blank">Adicodes270</a></p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

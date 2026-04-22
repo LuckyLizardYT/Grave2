@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="status.css" />
+    <link rel="icon" type="image/x-icon" href="assets/grave.ico">
+    <title>Status — GRAVE Bot</title>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <nav class="navbar">
+        <div class="heading">
+            <a href="index.html"><img src="assets/grave.webp" alt="GRAVE Logo"></a>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="command.html">Commands</a></li>
+            <li><a href="status.html" class="active">Status</a></li>
+            <li><a href="docs.html">Docs</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="features.html">Features</a></li>
+        </ul>
+        <a href="https://github.com/Adicodes270/grave-dc-bot" target="_blank" class="github-btn">
+            <button><i class="fa-brands fa-github"></i> Github</button>
+        </a>
+    </nav>
+
+    <header class="page-header">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Status</p>
+        <h1>System Status</h1>
+        <p>Live status and uptime information for all GRAVE Bot services.</p>
+    </header>
+
+    <main class="status-main">
+
+        <!-- Overall status banner -->
+        <div class="status-banner operational">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+                <strong>All Systems Operational</strong>
+                <span>Last checked: just now</span>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <section class="status-section">
+            <h2 class="status-section-title">Core Services</h2>
+            <div class="status-list">
+                <div class="status-row">
+                    <div class="status-row-info">
+                        <span class="status-dot green"></span>
+                        <div>
+                            <strong>Bot Gateway</strong>
+                            <p>Discord WebSocket connection</p>
+                        </div>
+                    </div>
+                    <div class="status-row-right">
+                        <span class="uptime-badge">99.9% uptime</span>
+                        <span class="status-label operational">Operational</span>
+                    </div>
+                </div>
+                <div class="status-row">
+                    <div class="status-row-info">
+                        <span class="status-dot green"></span>
+                        <div>
+                            <strong>Command Handler</strong>
+                            <p>Slash command processing</p>
+                        </div>
+                    </div>
+                    <div class="status-row-right">
+                        <span class="uptime-badge">99.8% uptime</span>
+                        <span class="status-label operational">Operational</span>
+                    </div>
+                </div>
+                <div class="status-row">
+                    <div class="status-row-info">
+                        <span class="status-dot green"></span>
+                        <div>
+                            <strong>Database</strong>
+                            <p>User data & server config storage</p>
+                        </div>
+                    </div>
+                    <div class="status-row-right">
+                        <span class="uptime-badge">100% uptime</span>
+                        <span class="status-label operational">Operational</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="status-section">
+            <h2 class="status-section-title">Feature Services</h2>
+            <div class="status-list">
+                <div class="status-row">
+                    <div class="status-row-info">
+                        <span class="status-dot green"></span>
+                        <div>
+                            <strong>Music Engine</strong>
+                            <p>Audio streaming & playback</p>
+                        </div>
+                    </div>
+                    <div class="status-row-right">
+                        <span class="uptime-badge">99.5% uptime</span>
+                        <span class="status-label operational">Operational</span>
+                    </div>
+                </div>
+                <div class="status-row">
+                    <div class="status-row-info">
+                        <span class="status-dot green"></span>
+                        <div>
+                            <strong>Moderation Module</strong>
+                            <p>Auto-mod, bans, logs</p>
+                        </div>
+                    </div>
+                    <div class="status-row-right">
+                        <span class="uptime-badge">99.9% uptime</span>
+                        <span class="status-label operational">Operational</span>
+                    </div>
+                </div>
+                <div class="status-row">
+                    <div class="status-row-info">
+                        <span class="status-dot yellow"></span>
+                        <div>
+                            <strong>Analytics API</strong>
+                            <p>Server stats processing</p>
+                        </div>
+                    </div>
+                    <div class="status-row-right">
+                        <span class="uptime-badge">97.2% uptime</span>
+                        <span class="status-label degraded">Degraded</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uptime chart placeholder -->
+        <section class="status-section">
+            <h2 class="status-section-title">90-Day Uptime</h2>
+            <div class="uptime-chart">
+                <div class="uptime-bars" id="uptimeBars"></div>
+                <div class="uptime-labels">
+                    <span>90 days ago</span>
+                    <span>Today</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Incident log -->
+        <section class="status-section">
+            <h2 class="status-section-title">Recent Incidents</h2>
+            <div class="incident-log">
+                <div class="incident resolved">
+                    <div class="incident-header">
+                        <span class="incident-dot resolved"></span>
+                        <strong>Music latency spike</strong>
+                        <span class="incident-date">Apr 18, 2024</span>
+                    </div>
+                    <p>Brief audio latency issues affecting a small number of voice channels. Resolved within 12 minutes.</p>
+                    <span class="incident-status resolved">Resolved</span>
+                </div>
+                <div class="incident resolved">
+                    <div class="incident-header">
+                        <span class="incident-dot resolved"></span>
+                        <strong>Database maintenance</strong>
+                        <span class="incident-date">Apr 10, 2024</span>
+                    </div>
+                    <p>Scheduled maintenance window for database optimisation. Services fully restored on schedule.</p>
+                    <span class="incident-status resolved">Resolved</span>
+                </div>
+                <p class="no-incidents">No incidents in the last 30 days.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 GRAVE Bot · <a href="https://github.com/Adicodes270" target="_blank">Adicodes270</a></p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
